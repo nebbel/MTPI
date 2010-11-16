@@ -1,4 +1,5 @@
 //Algorisme per convertir un digit hexadecimal a binari
+//falla quan hi ha zeros en el numero la conversio falla!
 
 #include <iostream>
 using namespace std;

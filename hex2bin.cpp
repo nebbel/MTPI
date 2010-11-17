@@ -1,5 +1,5 @@
 //Algorisme per convertir un digit hexadecimal a binari
-//falla quan hi ha zeros en el numero la conversio falla!
+//falla quan hi ha zeros en el numero la conversio fa
 
 #include <iostream>
 using namespace std;
@@ -28,13 +28,16 @@ int hex2dec(char numhex){
 //{POST: Sortida la conversio a decimal (enter)}
 
 	//Declaracio de variables
-	int numdec;		//Sortida
-	
+	int numdec;		//Sortida	
+		
 		if ((numhex>='0')&&(numhex<='9')){
 			numdec=numhex-48;
 		} else numdec=numhex-55;	
+	
 	return numdec;
 }
+
+
 
 int main(){
 	
@@ -47,9 +50,9 @@ int main(){
 	cout << "Entra un digit en hexadecimal (0-F),acabat en . "<<endl;
 	cin >> num;	
 		
-	while (num!='.'){	
-		cout << hex2dec(num)<<endl;
-		cout << dec2bin(hex2dec(num));
+	while (num!='.'){
+		if (hex2dec(num)==0) cout <<"0"<<endl;	
+		else cout << dec2bin(hex2dec(num))<<endl;
 		cin >> num;
 	}	
 	return 0;
